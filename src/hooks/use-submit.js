@@ -36,7 +36,7 @@ const useSubmit = (cartItems, emptyCart) => {
       }
       const data = await response.json();
       setOrderStatus({ status: true, orderNum: data.name });
-      // emptyCart();
+      emptyCart();
     } catch (error) {
       console.log(error);
       setOrderStatus({ status: false, orderNum: "" });
